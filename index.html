@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FinTerminal 3.0</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                850: '#1e293b', // Custom dark shade
+                950: '#020617', // Deep dark
+              }
+            }
+          }
+        }
+      }
+    </script>
     <style>
       /* Custom Scrollbar for that 'Terminal' feel */
       ::-webkit-scrollbar {
@@ -12,13 +27,22 @@
         height: 8px;
       }
       ::-webkit-scrollbar-track {
+        background: #f1f5f9; 
+      }
+      .dark ::-webkit-scrollbar-track {
         background: #0f172a; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #334155; 
+        background: #94a3b8; 
         border-radius: 4px;
       }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #334155; 
+      }
       ::-webkit-scrollbar-thumb:hover {
+        background: #64748b; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
         background: #475569; 
       }
 
@@ -45,7 +69,7 @@
 }
 </script>
 </head>
-  <body class="bg-black">
+  <body class="bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-gray-200 transition-colors duration-200">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>

@@ -68,7 +68,7 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [rawFinancialData, setRawFinancialData] = useState<FinancialDataPoint[]>([]);
   const [apiKey, setApiKeyState] = useState('');
   const [fxRateConfig, setFxRateConfigState] = useState<FxRateConfig>(DEFAULT_FX_CONFIG);
-  const [activeTab, setActiveTab] = useState('comparison');
+  const [activeTab, setActiveTab] = useState('validation');
   const [selectedAuditId, setSelectedAuditId] = useState<string | null>(null);
   
   // Validation Map now uses LOGICAL ID (Bank+Metric+Period+Segment) as key
