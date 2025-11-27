@@ -1,0 +1,5 @@
+{
+  "name": "FinTerminal 3.0 (Published)",
+  "description": "A Bloomberg-style financial analysis terminal for comparing bank performance in Hong Kong, featuring data ingestion, normalization mapping, and AI-powered peer analysis.",
+  "requestFramePermissions": []
+}
