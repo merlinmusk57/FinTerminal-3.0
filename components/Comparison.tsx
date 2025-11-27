@@ -1,5 +1,3 @@
-
-
 import React, { useState, useRef, useEffect } from 'react';
 import { useData } from '../contexts/DataContext';
 import { BankName, StandardizedSegment, FinancialDataPoint } from '../types';
@@ -65,7 +63,7 @@ const CitationCell: React.FC<CitationCellProps> = ({ metric, bank, selectedPerio
       return () => {
         document.removeEventListener("mousedown", handleClickOutside);
       };
-    }, [isCommentOpen, data]); // Depends on data to ensure closure has access if needed
+    }, [isCommentOpen, data, comments]); // Dependencies updated to ensure saveComment closure is fresh
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
       if (e.key === 'Enter' && !e.shiftKey) {
